@@ -1,0 +1,61 @@
+body {
+    font-family: "Source Sans Pro", sans-serif;
+
+}
+nav {
+    height:20px;
+    background-color:lightblue;
+}
+
+#fecha {
+    float:right;
+}
+.ticket {
+    border:solid lightblue;
+    
+
+}
+.contenido img{
+    width: 20px
+}
+.margen_derecho {
+    margin-left:275px;
+}
+.sidebar {
+    font-family: "Source Sans Pro", sans-serif;
+
+    position: absolute;
+    width: 250px;
+    height:100%;
+
+    background: #8969ad;
+    color: rgb(237, 208, 250);
+}
+.sidebar h2 {
+    text-align: center;
+    padding: 10px;
+    background: #775899
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+.sidebar li {
+    outline: 1px solid #7f5ea1;
+}
+.sidebar li:hover {
+    background: #7f5ea1;
+    border-left: 4px solid rgb(237, 208, 250);
+
+}
+.sidebar a {
+    display:block;
+    color: rgb(237, 208, 250);
+    text-decoration: none;
+    padding: 10px;
+}
+.menu-bar {
+    width: 1000px
+}

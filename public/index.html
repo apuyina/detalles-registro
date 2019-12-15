@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sistema de archivado de Tickets</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='estilo.css' id="tema">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+</head>
+<header>
+
+</header>
+<nav>
+    <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+
+</nav>
+<body>
+  <button height="20px" id="switch" onclick="cambiarTema()">Switch Theme</button>
+    <!--Barra lateral izquierda-->
+    <div class="sidebar">
+        <h2>MENÚ</h2>
+        <ul>
+        <a href="#diario"><li>Diario</li></a>
+        <a href="#semanal"><li>Semanal</li></a>
+        <a href="#mensual"><li>Mensual</li></a>
+        <a href="mailto:florencia.quatrin@gmail.com"><li>Contacto</li></a>
+        </ul>
+    </div>
+
+    <div class="contenido">
+        <img src="./img/menu-icono.png" width: 20px alt="Menú hamburguesa" class="menu-bar">
+    </div>
+    <!--Lado derecho de la página-->
+<div class="margen_derecho">
+        <h2>elegi tu ticket</h2>
+    <button class="boton"><a href="formulario.html">aqui</a>  </h2></button>
+    
+     <h2>Ver tickets</h2>
+    <form method="post" action="/ver">
+       
+    <button class="boton" type="submit">ticket</button>
+
+    </form>
+
+    <p><div id="fecha">Fecha: </div></p>
+    
+    <div class="ticket">
+        <h1>Detalles del pedido</h1>
+        <form method="POST" action="/ticket" enctype="form-data" id="formulario" name="formulario">
+            <!--action: acá iría la URL-->
+            <fieldset>
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre" autofocus required>
+            </fieldset>
+            
+            <fieldset>
+            <label for="telefono">Teléfono: </label>
+            <input type="number"id="telefono" name="telefono" value="1564316538" autofocus required>
+            </fieldset>
+
+
+            <fieldset>
+            <label for="prenda">Prenda: </label>
+            <select type = "text" id="prenda" name="prenda" required>
+                <option value="pantalon">Pantalón</option>
+                <option value="remera">Remera</option>
+                <option value="vestido">Vestido</option>
+                <option value="otros">Otros...</option>
+            </select>
+            </fieldset>
+
+            <fieldset>
+            <label for="descripcion">Descripción: </label>
+            <input type="text" id="descripcion" name="descripcion" autofocus required>
+            </fieldset>
+
+            <fieldset>
+            <label for="total">Valor total: </label>
+            <input type="number"id="total" name="total" autofocus required>
+            </fieldset>
+
+            <fieldset>
+            <label for="sena">Seña: </label>
+            <input type="number"id="sena" name=sena autofocus required oninput="obtenerSaldo()">
+            </fieldset>
+            <fieldset>
+            <div id="saldo" name="saldo">Saldo:</div>
+            </fieldset>
+
+            <input type="submit">
+        </form> 
+    </div>
+    <span></span>
+    <div id="diario">
+        <h1>Registro diario de ingresos</h1>
+        <table class="egt">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="2">Anthony</th>
+      <th colspan="2">Lione</th>
+    </tr>
+    <tr>
+      <th scope="col">Fecha</th>
+      <th>Income</th>
+      <th>Outcome</th>
+      <th>Income</th>
+      <th>Outcome</th>
+    </tr>
+  </thead>
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+    <tr>
+      <th>15/07</th>
+      <td>$200,00</td>
+      <td>$50,00</td>
+      <td>$0</td>
+      <td>$0</td>
+    </tr>
+    <tr>
+      <th>28/07</th>
+      <td>$0,00</td>
+      <td>$100,00</td>
+      <td>$100,00</td>
+      <td>$0,00</td>
+    </tr>
+  </tbody>
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+    <tr>
+      <th>09/08</th>
+      <td>$0,00</td>
+      <td>$50,00</td>
+      <td>$0,00</td>
+      <td>$80,00</td>
+    </tr>
+    <tr>
+      <th>22/08</th>
+      <td>$40,00</td>
+      <td>$0,00</td>
+      <td>$0,00</td>
+      <td>$110,00</td>
+    </tr>
+    <tr>
+      <th>25/08</th>
+      <td>$0,00</td>
+      <td>$20,00</td>
+      <td>$0,00</td>
+      <td>$0,00</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Balance</th>
+      <td colspan="2">$20,00</td>
+      <td colspan="2">$10,00</td>
+    </tr>
+  </tfoot>
+</table>
+    </div>
+    <span></span>
+    <div id="semanal">
+        <h1>Registro semanal de ingresos</h1>
+
+    </div>
+    <span></span>
+    <div id="mensual">
+        <h1>Registro mensual de ingresos</h1>
+
+    </div>
+    <div id="creado"><h1>Ticket enviado!</h1><p><h4 href="/index.html">¿Desea crear otro ticket?</h4></p></div>
+</div>
+    <script src='main.js'></script>
+</body>
+<footer>
+
+</footer>
+</html>
