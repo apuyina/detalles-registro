@@ -14,7 +14,7 @@
 <nav>
     <form id="busqueda" height=60% class="search-container" name="search-container" action="/busqueda" method="GET">
       <input type="text" placeholder="Buscar cliente..." name="search">
-      <button type="submit"><i class="fa fa-search">Buscar</i></button>
+      <button type="submit"><i class="search">Buscar</i></button>
     </form>
     <a id="cambiartema" onclick="cambiarTema()"> <img height=75% src="./img/oscuro.png"></a>
     <a id="contacto" href="mailto:florencia.quatrin@gmail.com"> <img src="./img/arroba.png" height=75%></a>
@@ -40,7 +40,7 @@
     </form>
 
     <p><div id="fecha">Fecha: </div></p>
-    
+
     <div class="ticket">
         <h1>Detalles del pedido</h1>
         <form method="POST" action="/ticket" enctype="form-data" id="formulario" name="formulario">
@@ -49,7 +49,7 @@
             <label for="nombre">Nombre: </label>
             <input type="text" id="nombre" name="nombre" autofocus required>
             </fieldset>
-            
+
             <fieldset>
             <label for="telefono">Teléfono: </label>
             <input type="number"id="telefono" name="telefono" value="1564316538" autofocus required>
@@ -85,7 +85,7 @@
             </fieldset>
 
             <button type="submit">Enviar</button>
-        </form> 
+        </form>
     </div>
     <span></span>
     <div id="diario">

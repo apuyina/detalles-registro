@@ -2,6 +2,9 @@ body {
     font-family: "Source Sans Pro", sans-serif;
 
 }
+.search {
+  
+}
 nav {
     height:20px;
     background-color:lightblue;
@@ -12,7 +15,7 @@ nav {
 }
 .ticket {
     border:solid lightblue;
-    
+
 
 }
 .contenido img{

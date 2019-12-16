@@ -4,6 +4,7 @@ body {
     color:#281d33;
     background-repeat:repeat;
 }
+
 nav {
     height:7vh;
     background-color:#ebc5fc;
@@ -13,11 +14,14 @@ nav {
     justify-content: flex-end;
     justify-items:space-around;
 }
+nav>img {
+  padding:2px
+}
 button {
   background-color: #ff9fa3;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -28,6 +32,7 @@ button {
   border-radius:12px;
 
 }
+
 #fecha {
     float:right;
     font-weight:bold;
