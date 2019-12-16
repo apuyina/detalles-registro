@@ -12,16 +12,14 @@
 
 </header>
 <nav>
-    <div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
+    <form id="busqueda" height=60% class="search-container" name="search-container" action="/busqueda" method="GET">
+      <input type="text" placeholder="Buscar cliente..." name="search">
+      <button type="submit"><i class="fa fa-search">Buscar</i></button>
     </form>
-  </div>
-
+    <a id="cambiartema" onclick="cambiarTema()"> <img height=75% src="./img/oscuro.png"></a>
+    <a id="contacto" href="mailto:florencia.quatrin@gmail.com"> <img src="./img/arroba.png" height=75%></a>
 </nav>
 <body>
-  <button height="20px" id="switch" onclick="cambiarTema()">Switch Theme</button>
     <!--Barra lateral izquierda-->
     <div class="sidebar">
         <h2>MENÚ</h2>
@@ -29,7 +27,6 @@
         <a href="#diario"><li>Diario</li></a>
         <a href="#semanal"><li>Semanal</li></a>
         <a href="#mensual"><li>Mensual</li></a>
-        <a href="mailto:florencia.quatrin@gmail.com"><li>Contacto</li></a>
         </ul>
     </div>
 
@@ -38,14 +35,8 @@
     </div>
     <!--Lado derecho de la página-->
 <div class="margen_derecho">
-        <h2>elegi tu ticket</h2>
-    <button class="boton"><a href="formulario.html">aqui</a>  </h2></button>
-    
-     <h2>Ver tickets</h2>
     <form method="post" action="/ver">
-       
-    <button class="boton" type="submit">ticket</button>
-
+    <button class="boton" type="submit">Ver tickets</button>
     </form>
 
     <p><div id="fecha">Fecha: </div></p>
@@ -102,30 +93,25 @@
         <table class="egt">
   <thead>
     <tr>
-      <th></th>
-      <th colspan="2">Anthony</th>
-      <th colspan="2">Lione</th>
-    </tr>
-    <tr>
       <th scope="col">Fecha</th>
-      <th>Income</th>
-      <th>Outcome</th>
-      <th>Income</th>
-      <th>Outcome</th>
+      <th>Codigo</th>
+      <th>Detalle</th>
+      <th>Ingresos</th>
+      <th>Egresos</th>
     </tr>
   </thead>
   <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
     <tr>
       <th>15/07</th>
-      <td>$200,00</td>
-      <td>$50,00</td>
-      <td>$0</td>
+      <td>01</td>
+      <td>Arreglo de cierre</td>
+      <td>$300</td>
       <td>$0</td>
     </tr>
     <tr>
       <th>28/07</th>
-      <td>$0,00</td>
-      <td>$100,00</td>
+      <td>02</td>
+      <td>Arreglo de botones</td>
       <td>$100,00</td>
       <td>$0,00</td>
     </tr>
@@ -133,30 +119,30 @@
   <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
     <tr>
       <th>09/08</th>
-      <td>$0,00</td>
-      <td>$50,00</td>
+      <td>03</td>
+      <td>Compra de materiales</td>
       <td>$0,00</td>
       <td>$80,00</td>
     </tr>
     <tr>
       <th>22/08</th>
-      <td>$40,00</td>
-      <td>$0,00</td>
-      <td>$0,00</td>
+      <td>04</td>
+      <td>Achique de pantalón</td>
       <td>$110,00</td>
+      <td>$0,00</td>
     </tr>
     <tr>
       <th>25/08</th>
-      <td>$0,00</td>
-      <td>$20,00</td>
-      <td>$0,00</td>
+      <td>05</td>
+      <td>Compra de tela para pedido</td>
+      <td>$250,00</td>
       <td>$0,00</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
-      <th>Balance</th>
-      <td colspan="2">$20,00</td>
+      <th>Cierre</th>
+      <td colspan="2">sdf</td>
       <td colspan="2">$10,00</td>
     </tr>
   </tfoot>
@@ -170,9 +156,7 @@
     <span></span>
     <div id="mensual">
         <h1>Registro mensual de ingresos</h1>
-
     </div>
-    <div id="creado"><h1>Ticket enviado!</h1><p><h4 href="/index.html">¿Desea crear otro ticket?</h4></p></div>
 </div>
     <script src='main.js'></script>
 </body>

@@ -1,9 +1,13 @@
 {
-  "name": "maira_duarte",
+  "name": "detalles-registro",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
+  "engines": {
+    "node": "10"
+  },
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

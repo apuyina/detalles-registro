@@ -1,9 +1,11 @@
 //Cambiar tema
-window.onload = document.getElementById('switch').onclick = function() {
-  if (document.getElementById('theme').href == "estilo.css") {
-    document.getElementById('theme').href = "dark.css";
+var tema = document.getElementById('tema').value
+
+function cambiarTema(tema) {
+  if (tema === "estilo.css") {
+    tema.href === "dark.css";
   } else {
-    document.getElementById('theme').href = "estilo.css";
+    tema.href === "estilo.css";
   }
 };
 //Función Date() para ver la fecha actual

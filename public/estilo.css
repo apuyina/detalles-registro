@@ -1,19 +1,31 @@
 body {
     font-family: "Source Sans Pro", sans-serif;
-
+    background-image: url("fondo.jpg");
+    color:#281d33;
+    background-repeat:repeat;
 }
 nav {
-    height:20px;
-    background-color:lightblue;
+    height:7vh;
+    background-color:#ebc5fc;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    flex-wrap:nowrap;
 }
-
 #fecha {
     float:right;
+    font-weight:bold;
+    margin:5px;
+    border-width:2px
 }
-.ticket {
-    border:solid lightblue;
-    
 
+.ticket {
+    background: linear-gradient(to bottom, #c9a6d9 17%, #8969ad 100%);
+    padding:15px
+}
+fieldset {
+   border:solid #ebc5fc;
+   background-color:#ebc5fc;
 }
 .contenido img{
     width: 20px
@@ -28,7 +40,7 @@ nav {
     width: 250px;
     height:100%;
 
-    background: #8969ad;
+    background: #8c6caf;
     color: rgb(237, 208, 250);
 }
 .sidebar h2 {

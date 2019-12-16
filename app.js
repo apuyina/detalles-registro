@@ -31,18 +31,25 @@ app.post('/ticket',function(req,res){
     var total=parseFloat(req.body.total);
     var sena=parseFloat(req.body.sena);
     var saldo=parseFloat(total-sena);
-    var fecha=req.body.fecha
+    var diaymes=req.body.diaymes
     bd.collection('ticket').insertMany([
-        {nombre:nombre,telefono:telefono,prenda:prenda,descripcion:descripcion,total:total,sena:sena,saldo:saldo,fecha:fecha}
+        {nombre:nombre,telefono:telefono,prenda:prenda,descripcion:descripcion,total:total,sena:sena,saldo:saldo,diaymes:diaymes}
     ])
-    res.json({nombre,telefono,prenda:prenda,descripcion,total,sena,saldo,fecha})
+    res.json({nombre,telefono,prenda,descripcion,total,sena,saldo,diaymes})
 })
 
 app.post('/ver',async function(req,res){
     var ticket = await bd.collection('ticket').find().toArray()
     res.json(ticket)
-       
 })
+
+app.post('/nombre', async function (req,res){
+	var alfajores = await bd.collection('ticket').find({}, { _id:0, nombre: 1}).toArray()
+	res.json(alfajores)
+	console.log(alfajores)
+})
+
+
 app.listen(puerto,function(){
     console.log("servidor escuchando en el puerto " + puerto);
 });
